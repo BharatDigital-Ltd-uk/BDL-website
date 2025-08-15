@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_departments",
+  "info": {
+    "singularName": "job-department",
+    "pluralName": "job-departments",
+    "displayName": "Job Department"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "job_openings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-opening.job-opening",
+      "mappedBy": "job_department"
+    }
+  }
+}

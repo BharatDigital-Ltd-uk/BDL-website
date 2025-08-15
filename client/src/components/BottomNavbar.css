@@ -1,0 +1,49 @@
+.bottom-navbar {
+  position: fixed;
+  bottom: 16px; /* Add some spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(0 104 242 / 30%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 92%;
+  max-width: 92%;
+  z-index: 1030;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #3b82f6;
+  border-radius: 40px; /* pill shape */
+  padding: 0 10px;
+}
+
+.bottom-navbar .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border-radius: 12px;
+  padding: 4px 6px;
+}
+
+.bottom-navbar .nav-item svg {
+  margin-bottom: 2px;
+  color: #0d6efd;
+  transition: all 0.2s ease-in-out;
+}
+
+.bottom-navbar .nav-item:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+.bottom-navbar .nav-item:hover svg {
+  color: #0d6efd;
+}

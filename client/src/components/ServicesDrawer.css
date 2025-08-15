@@ -1,0 +1,54 @@
+/* ServicesDrawer.css */
+.services-drawer-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1050;
+}
+
+.services-drawer-overlay.show {
+  display: block;
+}
+
+.services-drawer {
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 1rem;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.drawer-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.drawer-link {
+  display: block;
+  padding: 0.75rem;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.drawer-link:hover {
+  background-color: #f8f9fa;
+}

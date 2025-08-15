@@ -1,0 +1,138 @@
+/* Wrapper with some padding around the card */
+.aboutBDLHome {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.about-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glassmorphism Card */
+.about-glass-card {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: white;
+  /* background: rgba(255, 255, 255, 0.15); */
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 1px solid #3b82f6;
+}
+
+.about-glass-card:hover {
+  border: 2px solid #3b82f6;
+}
+
+/* Text styles */
+.about-heading {
+  color: #102a43;
+  font-size: 2.3rem;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(16, 42, 67, 0.9);
+  margin-bottom: 1rem;
+}
+
+/* Glass button */
+.about-btn {
+  background: rgba(59, 130, 246, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  /* transition: all 0.3s ease; */
+}
+
+.about-btn:hover {
+  background: rgba(59, 130, 246, 1);
+  color: white;
+  /* transform: translateY(-2px); */
+}
+
+/* Image */
+.about-img {
+  border-radius: 1.5rem;
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Flex */
+.about-half {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .about-half {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .about-glass-card {
+    padding: 1.5rem;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .about-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .about-img {
+    max-height: 250px;
+  }
+}
+
+/* Ensure proper stacking on small screens */
+@media (max-width: 991.98px) {
+  .about-half {
+    width: 100%;
+    margin-bottom: 2rem; /* Space between image and text */
+  }
+
+  .about-img {
+    max-height: 250px;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+  }
+}

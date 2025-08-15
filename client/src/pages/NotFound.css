@@ -1,0 +1,9 @@
+.full-screen {
+  width: 100vw;     /* Full width of viewport */
+  height: 100vh;    /* Full height of viewport */
+  margin: 0;
+  padding: 0;
+  display: flex;    /* Optional: for centering */
+  justify-content: center;
+  align-items: center;
+}

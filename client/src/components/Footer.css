@@ -1,0 +1,14 @@
+.quick-links a {
+  transition: color 0.3s ease !important;
+}
+
+.quick-links a:hover {
+  color: #0d6efd !important; /* Bootstrap primary blue or any color you prefer */
+}
+
+
+@media (max-width: 768px) {
+  footer {
+  padding-bottom: 5rem;
+}
+}

@@ -1,0 +1,70 @@
+/* ---------------------------------- */
+/* Hero.css */
+/* ---------------------------------- */
+
+/* Base Button Styles */
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  min-width: 170px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Explore Services Button */
+.hero-btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.hero-btn-primary:hover {
+  background-color: #0056b3 !important; /* darker blue */
+}
+
+/* Contact Us Button */
+.hero-btn-outline {
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-outline:hover {
+  background-color: #3b82f6;
+  color: white !important;
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+}
+
+/* Mobile Layout: Full viewport & vertical centering */
+/* Mobile layout - full height + vertical center */
+@media (max-width: 1000px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center vertically */
+    align-items: center;     /* center horizontally */
+    min-height: 100svh;      /* safe viewport height */
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hero > div {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .hero .hero-btn {
+    width: 100%;
+  }
+}
+

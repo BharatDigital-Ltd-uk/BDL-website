@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_openings",
+  "info": {
+    "singularName": "job-opening",
+    "pluralName": "job-openings",
+    "displayName": "Job Opening"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "job_department": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::job-department.job-department",
+      "inversedBy": "job_openings"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "isActive": {
+      "type": "boolean"
+    }
+  }
+}

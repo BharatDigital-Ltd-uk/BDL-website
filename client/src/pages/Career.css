@@ -1,0 +1,271 @@
+.career-page {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.roadmap-step {
+  flex: 1 1 160px;
+  min-width: 120px;
+  padding: 1rem;
+  margin: 0.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background: #3B82F6;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .glassy-tabs .nav-link {
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin: 0 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: background 0.3s;
+} */
+
+/* .glassy-tabs .nav-link.active {
+  background-color: linear-gradient(to right, #4488db, #2c86cf) !important;
+  border: none;
+}
+
+.glassy-accordion {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border: 1px solid rgba(200, 200, 255, 0.3);
+  overflow: hidden;
+} */
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+
+    color: blue;
+   
+}
+
+.nav-tabs .nav-link  {
+
+    color: black;
+   
+}
+.accordion-button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff; /* White text */
+  background: linear-gradient(90deg, #438bff, #60A5FA); /* Gradient using shades of blue */
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+  text-transform: uppercase;
+}
+
+.accordion-button:hover {
+  background: linear-gradient(90deg, #2563EB, #3B82F6); /* Slightly darker gradient on hover */
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, #1251ff, #3B82F6); /* Even darker gradient when expanded */
+  color: #fff;
+  border-bottom: 1px solid rgba(0, 123, 255, 0.3);
+}
+
+.accordion-body {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  color: #222;
+}
+
+/* .glassy-accordion {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+} */
+
+/* .glassy-accordion:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+} */
+
+.accordion-header {
+  padding: 0;
+}
+
+.accordion-body {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #222;
+  padding: 1.5rem;
+  font-size: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.accordion-body p,
+.accordion-body ul {
+  margin-bottom: 0.5rem;
+}
+
+.text-primary {
+  color: #3b82f6 !important;
+}
+
+.bg-primary {
+  background-color: #3B82F6 !important; /* Or your desired color */
+}
+
+.carousel-item {
+  min-height: 300px;
+}
+
+.accordion-body {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #222;
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.4s ease-in-out;
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* Headings inside job descriptions */
+.accordion-body h6 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraphs */
+.accordion-body p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+/* Bullet lists */
+.accordion-body ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: disc;
+}
+
+.accordion-body li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  padding-left: 0.25rem;
+  position: relative;
+  color: #333;
+}
+
+/* Optional: add a custom bullet */
+.accordion-body li::marker {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Apply Now button */
+.carousel-inner {
+  height: calc(100vh - 70px);
+}
+
+.hiring-procedure-section {
+  border-radius: 1rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+}
+
+.career-bottom-section{
+  background-color: linear-gradient(to right, #e9f3ff, #f4faff);
+}
+
+.hiring-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.circle-number {
+  width: 48px;
+  height: 48px;
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Line connector between steps */
+.connector {
+  position: absolute;
+  top: 24px;
+  right: -50%;
+  width: 100%;
+  height: 1.5px;
+  background-color: #3b82f6;
+  z-index: 1;
+}
+
+.accordion-body h6 {
+  text-transform: none; /* Ensures headings like Key Responsibilities stay normal case */
+}
+
+@media (max-width: 768px) {
+  .connector {
+    display: none;
+  }
+}
+
+
+/* Entry animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* original */
+.job-meta {
+  font-size: 0.95rem;
+  background-color: #f8f9fa; /* Light gray */
+  border-left: 4px solid #0d6efd; /* Bootstrap primary */
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.5em 0.75em;
+}

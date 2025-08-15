@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+ .pricing-section-title{
+    font-size: 1.7rem !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+ }
+
+ .pricing-section-container {
+   padding: 1.5rem;
+   padding-bottom: 3rem !important;
+ }
+
+ .get-started-btn {
+    display: flex;
+    justify-content: center;
+ }
+}

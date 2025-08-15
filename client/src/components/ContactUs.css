@@ -1,0 +1,71 @@
+.glass-card {
+  /* background: rgba(255, 255, 255, 0.15); */
+  background: white;
+  border: 1px solid #3b82f6;
+  border-radius: 1rem;
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  border: 2px solid #3b82f6;
+}
+
+.contact-section .form-control {
+  border: none;
+  border-bottom: 2px solid #3b82f6;
+  border-radius: 0;
+  padding: 0.5rem 0;
+  background: transparent !important;
+  box-shadow: none;
+  color: #000;
+}
+
+.contact-title {
+  font-size: 2.3rem;
+}
+
+.contact-section .form-control:focus {
+  border-bottom: 2px solid #2563eb; /* Slightly darker blue on focus */
+  outline: none;
+  box-shadow: none;
+  background: transparent !important;
+  color: #000;
+}
+
+.contact-section textarea.form-control {
+  border: none;
+  border-bottom: 2px solid #3b82f6;
+  border-radius: 0;
+  background: transparent !important;
+  color: #000;
+  resize: none;
+}
+
+.form-control:focus {
+  background-color: transparent !important; /* keep same background */
+  box-shadow: none !important; /* remove blue shadow */
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* Autofill fix with glass background */
+.contact-section .form-control:-webkit-autofill,
+.contact-section .form-control:-webkit-autofill:hover,
+.contact-section .form-control:-webkit-autofill:focus,
+.contact-section textarea.form-control:-webkit-autofill,
+.contact-section textarea.form-control:-webkit-autofill:hover,
+.contact-section textarea.form-control:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* transparent overlay */
+  -webkit-text-fill-color: #000 !important; /* keep text black */
+  background-color: transparent !important; /* no solid fill */
+  background-clip: border-box !important; /* allow glass to show */
+  transition: background-color 9999s ease-in-out 0s !important; /* prevent flash */
+}

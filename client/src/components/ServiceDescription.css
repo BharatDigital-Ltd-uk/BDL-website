@@ -1,0 +1,10 @@
+@media (max-width: 767px) {
+ .service-description-section {
+   padding: 1rem;
+   padding-bottom: 3rem !important;
+ }
+
+ .service-description-title {
+    text-align: center;
+ }
+}

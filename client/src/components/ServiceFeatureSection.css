@@ -1,0 +1,24 @@
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+  .service-feature-title {
+    font-size: 1.7rem !important;
+  }
+
+  .service-feature-container {
+    padding: 1.5rem !important;
+  }
+
+  /* Override Bootstrap px-5 for small screens */
+  .px-5 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
