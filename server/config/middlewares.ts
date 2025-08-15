@@ -11,21 +11,18 @@ export default [
             "'self'",
             'https:',
             'http:',
-            'https://owjkaylfsdqyukhbszrx.supabase.co', // API requests
           ],
           'img-src': [
             "'self'",
             'data:',
             'blob:',
             'res.cloudinary.com', // Cloudinary images/thumbnails
-            'https://owjkaylfsdqyukhbszrx.supabase.co', // images from Supabase
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'res.cloudinary.com', // Cloudinary videos/audio if any
-            'https://owjkaylfsdqyukhbszrx.supabase.co',
           ],
           'frame-src': [
             "'self'",
