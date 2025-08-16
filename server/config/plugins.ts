@@ -58,8 +58,8 @@ export default ({ env }: { env: (key: string, defaultValue?: string) => string }
         },
       },
       settings: {
-        defaultFrom: env('EMAIL_FROM', 'gayathrigcse2022@gmail.com'),
-        defaultReplyTo: env('EMAIL_REPLY_TO', 'gayathrigcse2022@gmail.com'),
+        defaultFrom: env('EMAIL_FROM', 'info@bharatdigital.co.uk'),
+        defaultReplyTo: env('EMAIL_REPLY_TO', 'info@bharatdigital.co.uk'),
       },
     },
   },
