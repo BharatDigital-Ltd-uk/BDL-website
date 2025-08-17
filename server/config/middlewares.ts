@@ -37,7 +37,7 @@ export default [
     name: 'strapi::cors',
     config: {
       origin: [
-        'https://bdl-2.vercel.app',
+        'https://bdl-website.vercel.app',
         'http://localhost:5173',
         'https://www.bharatdigital.co.uk',
       ],
