@@ -54,10 +54,10 @@ const Testimonials = () => {
           spaceBetween={16}
           loop={true}
           loopedslides={adjustedTestimonials.length}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           speed={1500}
           grabCursor={true}
           allowTouchMove={true}

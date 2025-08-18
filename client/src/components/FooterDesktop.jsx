@@ -54,7 +54,7 @@ const FooterDesktop = () => {
             <ul className="list-unstyled small mb-3">
               <li className="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
                 <FaPhoneAlt className="me-2 text-primary" />
-                <span>+447778103271</span>
+                <span>02081295013</span>
               </li>
               <li className="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
                 <FaEnvelope className="me-2 text-primary" />

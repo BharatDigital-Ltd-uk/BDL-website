@@ -53,7 +53,7 @@ const FooterMobile = () => {
             <ul className="list-unstyled small mb-0">
               <li className="mb-2 d-flex align-items-start">
                 <FaPhoneAlt className="me-2 text-primary mt-1" />
-                <span>+447778103271</span>
+                <span>02081295013</span>
               </li>
               <li className="mb-2 d-flex align-items-start">
                 <FaEnvelope className="me-2 text-primary mt-1" />
