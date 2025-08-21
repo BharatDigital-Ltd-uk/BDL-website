@@ -4,34 +4,128 @@ import './Testimonials.css';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-// ✅ Import your placeholder image from src/assets
-// Adjust the filename/path if yours differs.
-import placeholderImg from '../assets/placeholder-avatar.png';
+// ✅ Placeholder image (local)
+import placeholderImg from '../assets/testimonials/placeholder-avatar.webp';
+
+import avatarMale1 from '../assets/testimonials/avatar-male-1.webp';
+import avatarMale2 from '../assets/testimonials/avatar-male-2.webp';
+import avatarMale3 from '../assets/testimonials/avatar-male-3.webp';
+import avatarMale4 from '../assets/testimonials/avatar-male-4.webp';
+import avatarFemale1 from '../assets/testimonials/avatar-female-1.webp';
+import avatarFemale2 from '../assets/testimonials/avatar-female-2.webp';
+
+// ✅ Dummy fallback data (shown while loading or on fetch failure)
+const FALLBACK_TESTIMONIALS = [
+  {
+    name: "Leslie Jones",
+    role: "Freelance React Developer",
+    img: avatarMale1,
+    quote:
+      "You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.",
+    stars: 5,
+  },
+  {
+    name: "Jacob Jones",
+    role: "Digital Marketer",
+    img: avatarMale2,
+    quote:
+      "Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.",
+    stars: 4,
+  },
+  {
+    name: "Jenny Wilson",
+    role: "Graphic Designer",
+    img: avatarFemale1,
+    quote:
+      "I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.",
+    stars: 5,
+  },
+  {
+    name: "Albert Flores",
+    role: "UX Designer",
+    img: avatarMale3,
+    quote:
+      "Truly remarkable! It transformed the way we work and communicate with our customers. Highly recommended!",
+    stars: 5,
+  },
+  {
+    name: "Sara Connor",
+    role: "Content Creator",
+    img: avatarFemale2,
+    quote:
+      "This platform made managing our team effortless. The user experience is fantastic, and it saves us hours every week!",
+    stars: 5,
+  },
+  {
+    name: "Michael Brown",
+    role: "Software Engineer",
+    img: avatarMale4,
+    quote:
+      "A game-changer for productivity! Everything is seamless and well-designed. I can’t imagine working without it now.",
+    stars: 5,
+  },
+];
+
+// 🔧 Helper to safely normalize possible Strapi shapes
+const normalizeStrapiItem = (item) => {
+  // Handles both flat and attributes-based shapes
+  const src = item?.attributes ? item.attributes : item || {};
+
+  const imageUrl =
+    // Strapi v4 media (populated): attributes.image.data.attributes.url
+    src?.image?.data?.attributes?.url ??
+    // Flat image object like { image: { url: '/uploads/...' } }
+    src?.image?.url ??
+    // Sometimes APIs expose 'img' directly
+    src?.img ??
+    '';
+
+  const backend = import.meta.env.VITE_RENDER_BACKEND_URL || '';
+  const absoluteImg = imageUrl?.startsWith('http')
+    ? imageUrl
+    : imageUrl
+    ? `${backend}${imageUrl}`
+    : '';
+
+  return {
+    id: item?.id,
+    name: src?.name ?? 'Anonymous',
+    role: src?.role ?? '',
+    quote: src?.quote ?? '',
+    stars: Number(src?.stars) > 0 ? Number(src?.stars) : 5,
+    img: absoluteImg,
+  };
+};
 
 const Testimonials = () => {
-  const [testimonials, setTestimonials] = useState([]);
+  // ✅ Start with fallback data immediately visible
+  const [testimonials, setTestimonials] = useState(FALLBACK_TESTIMONIALS);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_RENDER_BACKEND_URL}/api/testimonials?populate=image`)
-      .then(res => res.json())
-      .then(data => {
-        if (data?.data) {
-          const formatted = data.data.map(item => ({
-            id: item.id,
-            name: item.name,
-            role: item.role,
-            quote: item.quote,
-            stars: item.stars,
-            img: item.image
-              ? item.image.url?.startsWith('http')
-                ? item.image.url
-                : `${import.meta.env.VITE_RENDER_BACKEND_URL}${item.image.url}`
-              : ''
-          }));
+    const backend = import.meta.env.VITE_RENDER_BACKEND_URL;
+    if (!backend) {
+      // No backend configured; keep showing fallback silently
+      return;
+    }
+
+    const url = `${backend}/api/testimonials?populate=image`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        // Expecting data?.data to be an array
+        const arr = Array.isArray(data?.data) ? data.data : [];
+        const formatted = arr.map(normalizeStrapiItem).filter(Boolean);
+
+        // If backend returned something valid, replace fallback
+        if (formatted.length > 0) {
           setTestimonials(formatted);
         }
       })
-      .catch(err => console.error('Error fetching testimonials:', err));
+      .catch((err) => {
+        console.error('Error fetching testimonials:', err);
+        // On error, keep showing the fallback data already in state
+      });
   }, []);
 
   // ====== Fix for loop flicker with few slides ======
@@ -83,7 +177,7 @@ const Testimonials = () => {
                 {/* Star Rating + Quote */}
                 <div>
                   <div className="d-flex mb-5">
-                    {[...Array(t.stars)].map((_, idx) => (
+                    {[...Array(t.stars || 5)].map((_, idx) => (
                       <svg
                         key={idx}
                         xmlns="http://www.w3.org/2000/svg"
@@ -119,8 +213,8 @@ const Testimonials = () => {
                     }}
                   />
                   <div className="ms-3 text-primary">
-                    <div className="fw-bold">{t.name}</div>
-                    <div className="text-muted small">{t.role}</div>
+                    <div className="fw-bold">{t.name || 'Anonymous'}</div>
+                    <div className="text-muted small">{t.role || ''}</div>
                   </div>
                 </div>
               </div>
