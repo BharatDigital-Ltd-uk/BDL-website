@@ -62,8 +62,8 @@ const FooterMobile = () => {
               <li className="d-flex align-items-start">
                 <FaMapMarkerAlt className="me-2 text-primary mt-1" />
                 <span>
-                  Unit 1-I, Romford Road,<br />
-                  London, England, E12 6BT
+                  Unit 1-I, 736-740 Romford Road, <br />
+                  Manor Park, London, E12 6BT
                 </span>
               </li>
             </ul>
