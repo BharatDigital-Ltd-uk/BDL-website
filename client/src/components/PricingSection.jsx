@@ -6,7 +6,7 @@ const PricingSection = ({ sectionTitle, description, plans }) => {
   return (
     <section className="py-5 px-5" style={{ background: "linear-gradient(to right, #eaf4ff, #f5faff)" }}>
       <div className="pricing-section-container text-center">
-        <h1 className="pricing-section-title fw-bold mb-3" style={{ color: "#0c1e3c", fontSize: "2.5rem" }}>
+        <h1 className="pricing-section-title fw-bold mb-3" style={{ color: "#0c1e3c", fontSize: "2rem" }}>
           {sectionTitle}
         </h1>
         <p className="text-muted mb-5" style={{ fontSize: "1.15rem" }}>
