@@ -15,6 +15,7 @@ import DigitalMarketing from './pages/DigitalMarketing';
 import SoftwareDevelopment from './pages/SoftwareDevelopment';
 import ITSupport from './pages/ITSupport';
 import SocialMedia from './pages/SocialMedia';
+import CADServices from './pages/CADServices';
 import NotFound from './pages/NotFound'; // ⬅️ Import the 404 page
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/software-development" element={<SoftwareDevelopment />} />
         <Route path="/it-support" element={<ITSupport />} />
         <Route path="/social-media" element={<SocialMedia />} />
+        <Route path="/cad-services" element={<CADServices />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/about" element={<About />} />
 
