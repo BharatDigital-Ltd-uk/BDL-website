@@ -55,6 +55,7 @@ return (
                   <li><Link className="dropdown-item nav-link" to="/software-development">Software Development</Link></li>
                   <li><Link className="dropdown-item nav-link" to="/it-support">IT Support</Link></li>
                   <li><Link className="dropdown-item nav-link" to="/social-media">Social Media Management</Link></li>
+                  <li><Link className="dropdown-item nav-link" to="/cad-services">CAD Services</Link></li>
                 </ul>
               </li>
 

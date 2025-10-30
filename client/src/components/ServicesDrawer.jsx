@@ -9,6 +9,7 @@ const services = [
   { name: "Software Development", path: "/software-development" },
   { name: "Digital Marketing", path: "/digital-marketing" },
   { name: "Social Media Management", path: "/social-media-management" },
+  { name: "CAD Services", path: "/cad-services" },
 ];
 
 const ServicesDrawer = ({ show, onClose }) => {

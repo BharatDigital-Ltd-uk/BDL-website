@@ -3,9 +3,9 @@
   bottom: 16px; /* Add some spacing from the bottom */
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: white;
+  /* backdrop-filter: blur(12px); */
+  /* -webkit-backdrop-filter: blur(12px); */
   border: 1px solid rgb(0 104 242 / 30%);
   display: flex;
   justify-content: space-around;
