@@ -49,13 +49,16 @@ export default ({ env }: { env: (key: string, defaultValue?: string) => string }
     config: {
       provider: 'nodemailer',
       providerOptions: {
-        host: env('SMTP_HOST', 'smtp.gmail.com'),
+        host: env('SMTP_HOST', 'smtppro.zoho.eu'), // EU data-centre SMTP
         port: Number(env('SMTP_PORT', '587')),
-        secure: env('SMTP_SECURE', 'false') === 'true',
+        // secure = true → SSL (port 465); false → STARTTLS (port 587)
+        secure: env('SMTP_SECURE') === 'true' || env('SMTP_PORT') === '465',
         auth: {
           user: env('SMTP_USER'),
           pass: env('SMTP_PASS'),
         },
+        requireTLS: true,
+        tls: { minVersion: 'TLSv1.2' },
       },
       settings: {
         defaultFrom: env('EMAIL_FROM', 'info@bharatdigital.co.uk'),
